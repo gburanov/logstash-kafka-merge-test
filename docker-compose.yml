@@ -13,7 +13,7 @@ services:
       - "2181:2181"
 
   kafka:
-    image: wurstmeister/kafka
+    build: image/kafka
     ports:
       - "9092:9092"
     depends_on:

@@ -3,6 +3,9 @@ version: '2.1'
 services:
   logstash:
     build: image/logstash
+    depends_on:
+      kafka:
+        condition: service_started
 
   zookeeper:
     image: wurstmeister/zookeeper

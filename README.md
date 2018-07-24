@@ -36,3 +36,7 @@ docker exec -it ae1c92a60f78 bash
 /opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users1 --from-beginning
 /opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users2 --from-beginning
 ```
+* Also in replicated topic
+```
+/opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users_replicated --from-beginning
+```

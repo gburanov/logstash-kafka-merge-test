@@ -1,0 +1,5 @@
+- pipeline.id: merge_pipeline
+  path.config: "/etc/pipeline/merge_topics.conf"
+
+- pipeline.id: mirror_pipeline
+  path.config: "/etc/pipeline/mirror_topic.conf"

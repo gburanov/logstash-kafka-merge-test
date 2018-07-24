@@ -5,11 +5,15 @@ logstash-kafka-merge-test
 * Also tried to mirror plugins
 
 ## Usage
-* Send messages to topic users1 and users2
+* Get the kafka config
 ```
-
+/opt/kafka/bin/kafka-topics.sh --describe  --zookeeper zookeeper:2181
 ```
-* Also, to users2
+* Create topics
 ```
-
+./create_topics.sh
+```
+* Send messages
+```
+./send_messages.sh
 ```

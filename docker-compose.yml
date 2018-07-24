@@ -20,5 +20,6 @@ services:
       zookeeper:
         condition: service_started
     environment:
-      KAFKA_ADVERTISED_HOST_NAME: ${DOCKER_KAFKA_HOST}
+      KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_PORT: 9092

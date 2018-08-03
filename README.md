@@ -28,13 +28,12 @@ docker exec -it ae1c92a60f78 bash
 ```
 * Check the messages in users topic
 ```
-/opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users --from-beginning
+/opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users --from-beginning --property print.key=true --property key.separator="-"
 ```
 * Also in 2 other topics
-
 ```
-/opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users1 --from-beginning
-/opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users2 --from-beginning
+/opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users1 --from-beginning --property print.key=true --property key.separator="-"
+/opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users2 --from-beginning --property print.key=true --property key.separator="-"
 ```
 * Also in replicated topic
 ```

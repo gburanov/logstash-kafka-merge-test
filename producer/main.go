@@ -29,10 +29,11 @@ func main() {
 	}
 
 	key := []byte(user.GetId())
-	err = tracker.SafeMessageWithKey("users1", bytes, key)
+	topic := "users_us6"
+	err = tracker.SafeMessageWithKey(topic, bytes, key)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println("Message sent")
+	fmt.Printf("Message sent to %s and %s \n", brokers[0], topic)
 }

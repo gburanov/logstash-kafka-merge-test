@@ -39,3 +39,12 @@ docker exec -it ae1c92a60f78 bash
 ```
 /opt/kafka/bin/kafka-console-consumer.sh --zookeeper zookeeper:2181 --topic users_replicated --from-beginning
 ```
+
+## Use recmd
+```
+kt consume -brokers kafka:9092 -topic users -offsets oldest -encodevalue hex | jq -r .value --unbuffered | recmd proto -p user
+```
+*
+```
+kt consume -brokers fh1.dw1.remerge.io:9092 -topic users_eu3 -offsets newest -encodevalue hex | jq -r .value --unbuffered | recmd proto -p user
+```
